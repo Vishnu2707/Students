@@ -71,7 +71,13 @@ async function fetchRSS(url) {
     const text = await res.text();
     const parser = new DOMParser();
     const xml = parser.parseFromString(text, "text/xml");
-    const items = Array.from(xml.querySelectorAll("item"));
+    let items = Array.from(xml.querySelectorAll("item"));
+
+    // Fallback for ATOM feeds
+    if (items.length === 0) {
+    items = Array.from(xml.querySelectorAll("entry"));
+    }
+
 
     return items.map((item) => ({
       title: item.querySelector("title")?.textContent ?? "Untitled",
