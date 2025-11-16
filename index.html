@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Tech Radar · UK</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Retro Pixel Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="crt-overlay"></div>
+
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <span class="logo-text">STUDENT TECH RADAR v0.1</span>
+      <span class="status-pill status-ok">ONLINE</span>
+      <span class="status-pill status-eco">LOW-POWER MODE</span>
+    </div>
+    <div class="top-bar-right">
+      <span class="motd">Quest of the day: Discover 1 new event + 1 news story.</span>
+    </div>
+  </header>
+
+  <main class="shell">
+    <!-- HUD / XP -->
+    <section class="hud">
+      <div class="hud-card">
+        <div class="hud-label">Player</div>
+        <div class="hud-value">BSc Computing Student</div>
+      </div>
+      <div class="hud-card">
+        <div class="hud-label">XP</div>
+        <div class="hud-xp-bar">
+          <div class="hud-xp-fill" id="xpFill"></div>
+        </div>
+        <div class="hud-xp-text" id="xpText">0 / 100 XP</div>
+      </div>
+      <div class="hud-card">
+        <div class="hud-label">Today’s Quests</div>
+        <ul class="hud-quests">
+          <li>🎯 Open one event you might attend.</li>
+          <li>📰 Read one article in your favourite field.</li>
+          <li>💡 Share one cool thing you learnt with a friend.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters">
+      <div class="filter-group">
+        <label for="categoryFilter">Sector</label>
+        <select id="categoryFilter">
+          <option value="all">All sectors</option>
+          <option value="ai">AI / ML</option>
+          <option value="cloud">Cloud / DevOps</option>
+          <option value="cyber">Cybersecurity</option>
+          <option value="web">Web / App Dev</option>
+          <option value="data">Data / Analytics</option>
+          <option value="quantum">Quantum</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="cityFilter">City</label>
+        <select id="cityFilter">
+          <option value="all">All UK</option>
+          <option value="london">London</option>
+          <option value="manchester">Manchester</option>
+          <option value="birmingham">Birmingham</option>
+          <option value="online">Online / Remote</option>
+        </select>
+      </div>
+
+      <div class="filter-group checkbox-group">
+        <label class="checkbox-label">
+          <input type="checkbox" id="freeOnly" />
+          <span>Free only</span>
+        </label>
+      </div>
+
+      <button id="refreshBtn" class="btn-refresh">↻ Refresh feeds</button>
+    </section>
+
+    <!-- Main grid: Events + News -->
+    <section class="grid">
+      <!-- Events Panel -->
+      <section class="panel">
+        <header class="panel-header">
+          <h2>🎟️ Tech Events & Hackathons (UK)</h2>
+          <p class="panel-subtitle">
+            Meetups, workshops & hackathons you can actually join. Filter, pick one, and level up.
+          </p>
+        </header>
+        <div id="eventsList" class="card-grid">
+          <!-- Event cards injected here -->
+        </div>
+        <div id="eventsStatus" class="panel-status"></div>
+      </section>
+
+      <!-- News Panel -->
+      <section class="panel">
+        <header class="panel-header">
+          <h2>📰 Tech News by Sector</h2>
+          <p class="panel-subtitle">
+            Short, student-friendly headlines across AI, cyber, cloud, data, web & quantum.
+          </p>
+        </header>
+        <div id="newsList" class="card-grid">
+          <!-- News cards injected here -->
+        </div>
+        <div id="newsStatus" class="panel-status"></div>
+      </section>
+    </section>
+
+    <section class="footer-info">
+      <p>
+        Tip: Bookmark this page and check it twice a week. Think of it as your
+        <span class="highlight">career mini-game lobby</span>.
+      </p>
+      <p class="small">
+        Built as a static, low-energy website: no heavy backends, no tracking, no noise — just signals.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Student Tech Radar · Built for international computing students.</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
