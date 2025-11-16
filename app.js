@@ -7,18 +7,19 @@ const EVENT_FEEDS = [
     url: "https://dev.to/events/feed"
   },
   {
-    name: "Hashnode Events",
-    url: "https://hashnode.com/rss/events"
-  },
-  {
     name: "Open Tech Calendar UK",
     url: "https://opentechcalendar.co.uk/api1/events.atom"
   },
   {
     name: "Hackathons Near Me",
     url: "https://www.hackathonsnear.me/rss"
+  },
+  {
+    name: "Hashnode Events",
+    url: "https://hashnode.com/rss/events"
   }
 ];
+
 
 
 
