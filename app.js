@@ -4,21 +4,22 @@
 const EVENT_FEEDS = [
   {
     name: "Dev.to Events",
-    url: "https://dev.to/events/feed",
-  },
-  {
-    name: "London Tech Meetup",
-    url: "https://www.meetup.com/london-tech-meetup/events/rss/",
-  },
-  {
-    name: "UK Hackathons",
-    url: "https://www.hackathonsnear.me/rss",
+    url: "https://dev.to/events/feed"
   },
   {
     name: "Hashnode Events",
-    url: "https://hashnode.com/rss/events",
+    url: "https://hashnode.com/rss/events"
+  },
+  {
+    name: "Open Tech Calendar UK",
+    url: "https://opentechcalendar.co.uk/api1/events.atom"
+  },
+  {
+    name: "Hackathons Near Me",
+    url: "https://www.hackathonsnear.me/rss"
   }
 ];
+
 
 
 // News RSS feeds
